@@ -19,8 +19,12 @@ iframe{z-index:100;border:0;outline:none;opacity:0;}iframe.show{-webkit-transiti
 .device{position:relative;}.device>div{-webkit-transition:0.5s ease-out all;-moz-transition:0.5s ease-out all;-ms-transition:0.5s ease-out all;-o-transition:0.5s ease-out all;transition:0.5s ease-out all;}
 .device .landscape{-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);}.device .landscape iframe{margin-left:0;}
 .device iframe{position:absolute;top:110px;left:50%;}
-#ipad{background:url('../img/iPad.png') 0 0 no-repeat transparent;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-size:100% auto;width:1005px;height:1400px;margin:0 auto;min-height:1100px;position:relative;z-index:10;}#ipad+iframe{width:768px;height:1024px;top:111px;margin-left:-384px;}
-#ipad.landscape{left:-75px;top:-200px;}#ipad.landscape+iframe{width:1024px;height:768px;left:438px;top:117px;}
-#iphone{background:url('../img/iPhone.png') 0 0 no-repeat transparent;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-size:100% auto;width:369px;height:700px;margin:0 auto;min-height:800px;position:relative;z-index:10;}#iphone+iframe{width:320px;height:563px;margin-left:-158px;}
-#iphone.landscape{top:-200px;}#iphone.landscape+iframe{width:563px;height:320px;left:453px;top:42px;}
+#ipad{background:url('../img/iPad.png') 0 0 no-repeat transparent;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-size:100% auto;width:1005px;height:1400px;margin:0 auto;min-height:1100px;position:relative;z-index:10;}#ipad+iframe{width:783px;height:1024px;top:111px;margin-left:-391.5px;}
+#ipad.landscape{left:-75px;top:-200px;}#ipad.landscape+iframe{width:1039px;height:768px;left:430.5px;top:117px;}
+#iphone{background:url('../img/iPhone.png') 0 0 no-repeat transparent;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-size:100% auto;width:369px;height:700px;margin:0 auto;min-height:800px;position:relative;z-index:10;}#iphone+iframe{width:335px;height:563px;margin-left:-165.5px;}
+#iphone.landscape{top:-200px;}#iphone.landscape+iframe{width:578px;height:320px;left:445.5px;top:42px;}
+.webkit #ipad+iframe{width:768px;height:1024px;top:111px;margin-left:-384px;}
+.webkit #ipad.landscape+iframe{width:1024px;height:768px;left:438px;top:117px;}
+.webkit #iphone+iframe{width:320px;height:563px;margin-left:-158px;}
+.webkit #iphone.landscape+iframe{width:563px;height:320px;left:453px;top:42px;}
 #me{padding:3em;width:100%;text-align:center;text-shadow:1px 1px 1px white;font-family:Pacifico, Arial;}#me a{color:#1f93de;text-decoration:none;}
