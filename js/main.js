@@ -1,9 +1,15 @@
 var Resp = (function($){
 
   var cfg = {
+    is_webkit: ($.browser.webkit !== undefined),
+    is_mac: (window.navigator.platform.indexOf('Mac') != -1)
   };
 
   var fn = {
+    'addBrowserClass': function() {
+      if( cfg.is_webkit && cfg.is_mac )
+        $('body').addClass('webkit');
+    },
     'changeOrientation' : function(e) {
       e.preventDefault();
       var $device = $('.show .device'),
@@ -96,6 +102,7 @@ var Resp = (function($){
 
   function init() {
 
+    fn.addBrowserClass();
     listeners.changeOrientation();
     listeners.changePage();
     listeners.changeLocation();
