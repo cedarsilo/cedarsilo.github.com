@@ -74,7 +74,7 @@ var Resp = (function($){
     'shareUrl': function() {
       var url = fn.getValue('#url')
                   .replace(/http:\/\//, '');
-      url = ['http://localhost/resp#', url].join('');
+      url = ['http://teston.me#', url].join('');
 
       window.prompt( "Copy to clipboard: Ctrl+C, Enter:", url);
     }
