@@ -182,10 +182,6 @@ iframe {
   .landscape {
     .rotate(90deg);
 
-    iframe {
-      margin-left:0;
-    }
-
   }
 
   iframe {
@@ -196,7 +192,20 @@ iframe {
 
 }
 
+.device {
+  margin:0 auto;
 
+  &.ipad ,
+  #ipad {
+    .size(1005px, 1400px);
+  }
+
+  &.iphone ,
+  #iphone {
+    .size(369px, 700px);
+  }
+
+}
 
 #ipad {
   @leftOffset: -75px;
@@ -204,7 +213,6 @@ iframe {
 
   .bg( '../img/iPad.png' );
   .background-size(100% auto);
-  .size(1005px, 1400px);
   margin:0 auto;
   min-height:1100px;
   position:relative;
@@ -222,8 +230,28 @@ iframe {
 
     + iframe {
       .size(1024px + @sidebar, 768px);
-      left:513px + @leftOffset - @sidebar/2;
+      margin-left:(-1024px - @sidebar)/2;
       top:317px + @topOffset;
+    }
+
+  }
+
+}
+
+.webkit #ipad {
+  @leftOffset: -75px;
+  @topOffset: -200px;
+
+  + iframe {
+    .size(768px, 1024px);
+    margin-left:-768px/2;
+  }
+
+  &.landscape {
+
+    + iframe {
+      .size(1024px, 768px);
+      margin-left:-1024px/2;
     }
 
   }
@@ -235,7 +263,6 @@ iframe {
 
   .bg( '../img/iPhone.png' );
   .background-size(100% auto);
-  .size(369px, 700px);
   margin:0 auto;
   min-height:800px;
   position:relative;
@@ -251,30 +278,8 @@ iframe {
 
     + iframe {
       .size(563px + @sidebar, 320px);
-      left:453px - @sidebar/2;
+      margin-left:(-563px - @sidebar)/2 + 12;
       top:242px + @topOffset;
-    }
-
-  }
-
-}
-
-.webkit #ipad {
-  @leftOffset: -75px;
-  @topOffset: -200px;
-
-  + iframe {
-    .size(768px, 1024px);
-    top:111px;
-    margin-left:-768px/2;
-  }
-
-  &.landscape {
-
-    + iframe {
-      .size(1024px, 768px);
-      left:513px + @leftOffset;
-      top:317px + @topOffset;
     }
 
   }
@@ -293,7 +298,7 @@ iframe {
 
     + iframe {
       .size(563px, 320px);
-      left:453px;
+      margin-left:-563px / 2 + 10;
       top:242px + @topOffset;
     }
 
